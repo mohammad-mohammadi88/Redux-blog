@@ -1,54 +1,53 @@
-# React + TypeScript + Vite
+# Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a sample Redux blog project using redux power.
 
-Currently, two official plugins are available:
+# Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ First you should clone it from https://github.com/mohammad-mohammadi88/Redux-blog
+ with command `git clone https://github.com/mohammad-mohammadi88/Redux-blog` and start using it.
 
-## Expanding the ESLint configuration
+# Technologies
+We used [React](https://react.dev/) and [Redux toolkit](https://redux-toolkit.js.org/) to show that we have some knowledge about it. Also we used pure css(with no frameworks or libraries), and mostly used [tsx](https://docs.fileformat.com/programming/tsx/) format to develop with [typescript](https://www.typescriptlang.org/) to make it more readable for developers. The server was a simple json-server that deployed on Render with url `https://redux-blog-g7jz.onrender.com`. You can go and visit it
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# Usage
+when you clone  it from [github](https://github.com), you will see [vite](https://vite.dev/) [React](https://react.dev) codes and a server folder named mock-api that I created for creating fake backend with json-server to send requests and saving data. You can start server with commands
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+    npm run server
+    #or
+    yarn server
+    #or
+    pnpm server
+    
+and start developing the project with commands
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+    npm run dev
+    #or 
+    yarn dev
+    #or
+    pnpm dev
+    
+and you can start them with a single command of
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+    npm start
+    #or
+    yarn start
+    #or
+    pnpm start
+    
+To start both with a single command you do not need any package or else. You only need to install dependencies with commands like
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+    npm i => // npm install
+
+    pnpm i => // pnpm install
+
+    yarn
+
+# server
+
+For server you do not need to do any thing. Server was deployed on https://redux-blog-g7jz.onrender.com. The server is very simple and easy json-server. To see product add "/posts" to url and for users list add "/users".
+
+
+# conclusion
+ This is a simple blog used Redux toolkit tools like createAsyncThunk, createEntityAdapter and Redux dev tools.
+I hope it might be useful for you.
