@@ -23,7 +23,7 @@ async function client(endpoint:string, { body,method='GET', ...customConfig }:se
 
     let data
     try {
-        const response = await fetch(import.meta.env.VITE_JSON_SERVER + endpoint, config)
+        const response = await fetch(import.meta.env.VITE_PRODUCTION_SERVER + endpoint, config)
         if(config.method === "GET") data = await response.json()
         else data = response
         if (response.ok) {
